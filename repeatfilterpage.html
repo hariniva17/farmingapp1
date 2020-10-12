@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app = 'repApp'>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="repeatfilterapp.js"></script>
+    <link rel="stylesheet" href="style7.css" >
+    <title>shop list</title>
+  </head>
+  <body>
+    <div class="section-top">
+    <div class="content">
+    <div ng-controller = 'repController'>
+      <h2>list of items available here:</h2>
+      <input type="text" ng-model="search1">
+      <ul class="a">
+        <li ng-repeat="item in shopList | filter : search1">{{item}}</li>
+      </ul>
+      <h2>Pricing List</h2>
+      <input type=text ng-model="search2.name" placeholder="check price and quantity here">
+      <table class="center">
+        <tr><th>Items</th><th>Price</th><th>Quantity</th></tr>
+        <tr ng-repeat="item in shopListDetails | filter : search2">
+          <td>{{item.name | uppercase }}</td>
+          <td>{{item.price | currency : "&#8377"}}</td>
+          <td>{{item.quan| number : 3}} kg</td>
+        </tr>
+      </table>
+    </div>
+    
+    <p>these items are available here if you want to buy or sell such vegetables shown above kindly contact ph-no:9443589113
+<ol>
+      <li><a href="custdirindex.html">click here to Add items to your cart</a></li></ol>
+    </p>
+  </div></div></body>
+</html>

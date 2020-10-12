@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style2.css" >
+
+<title>
+    
+
+<h1>Farming website</h1>
+
+</title>
+
+<script type="text/javascript" src="angular.min.js"></script>
+
+<script>
+var app = angular.module('ngclickApp', []);
+
+app.controller('ngclickCtrl', function ($scope) {
+
+$scope.getdetails = function (msg) {
+
+$scope.result = msg;
+
+}
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+    <div class="section-top">
+        <div class="content">
+
+<div ng-app="ngclickApp" ng-controller="ngclickCtrl">
+
+<h2>farming website</h2>
+
+<input type="button" style="cursor:pointer" value="Click Here" ng-click ="getdetails('welcome to our farming website and for more details contact- ph no:9443589113   ')" /><br /><br />
+
+<span style="color:blue">{{result}}</span>
+
+</div>
+
+<p>this web application is for governmet organizations to educate the farmers regarding to direct selling and their benefits regarding loan and etc....and this app also has weather forecasting to know wheather details and safeguard our nature
+<ul>
+
+    <li><a href="inheritance.html">click here</a></li>
+    </ul>
+</p>
+</div>
+</div>
+
+</body>
+
+</html>

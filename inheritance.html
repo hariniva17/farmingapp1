@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="inheritanceDemo">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style6.css" />
+    <script data-require="angular.js@1.3.x" src="https://code.angularjs.org/1.3.6/angular.js" data-semver="1.3.6"></script>
+    <script src="inheritanceapp.js"></script>
+  </head>
+
+  <body >
+    <div class="section-top">
+        <div class="content">
+  <div  ng-controller="MainCtrl as parent">
+    <p>Hello {{parent.dad}}!</p>
+    <p>Hello {{parent.mom}}!</p>
+    <span ng-click=parent.methodclick()>Farmers click </span>
+    </div>
+    <div ng-controller="ChildCtrl as Children">
+    <p>Hello {{Children.child.dad}}!</p>
+     <p>Hello {{Children.child.mom}}!</p>
+       <span ng-click=Children.child.methodclick()> be proud of being a farmer </span></br>
+       
+    </div>
+    </div>
+    </div>
+  </body>
+
+</html>
+
+

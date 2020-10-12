@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+        <title> WEB TECHNOLOGY -DIFF BETWEEN TWO NUMBERS</title>
+
+
+
+    </head>
+    
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+<body ng-app="simplecal">
+    <div>
+
+        <h1 style="text-align:center">
+              WEB TECHNOLOGY</h1>
+        <h1 style="text-align:center">
+            Difference between two numbers
+        </h1>
+    </div>
+    <div class="center">
+    <div ng-controller="simplecalcontroller">
+        Enter First no:
+        <div>
+            <input type="text" ng-model="n1" ng-keyup="cal()";>
+        </div>
+        <br>
+        Enter second no:
+        <div>
+            <input type="text" ng-model="n2" ng-keyup="cal()";>
+        </div>
+        <br>
+        <div>
+            Difference between two values is:{{totalvalue}}
+        </div>
+
+    </div>
+    </div>
+</body>
+    </html>
